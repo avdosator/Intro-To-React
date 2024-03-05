@@ -5,6 +5,7 @@ import ArrayArgument from './ArrayArgument'
 import ObjectArgument from './ObjectArgument'
 import DoubleDice from './DoubleDice'
 import DynamicHeading from './DynamicHeading'
+import ColorList from './ColorList'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <ObjectArgument person={ {name: "Avdo", age: 29} } /> */}
       <DoubleDice />
       <DoubleDice />
+      <ColorList colors={["red", "green", "blue", "yellow"]} />
     </div>
   )
 }
