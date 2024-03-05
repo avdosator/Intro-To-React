@@ -4,10 +4,13 @@ import Die from './Die'
 import ArrayArgument from './ArrayArgument'
 import ObjectArgument from './ObjectArgument'
 import DoubleDice from './DoubleDice'
+import DynamicHeading from './DynamicHeading'
 
 function App() {
   return (
     <div>
+      <DynamicHeading color='violet' text="This is dynamic heading" fontSize="35px" />
+      <DynamicHeading color='lightblue' text="This is second dynamic heading" fontSize="20px" />
       {/* <Greeter name="avdo" />
       <Greeter name="vedo" /> */}
       {/* <Die numSides={20} />
@@ -15,7 +18,6 @@ function App() {
       <Die  /> */}
       {/* <ArrayArgument values={[1,2,3,4]} />
       <ObjectArgument person={ {name: "Avdo", age: 29} } /> */}
-      <DoubleDice />
       <DoubleDice />
       <DoubleDice />
     </div>
