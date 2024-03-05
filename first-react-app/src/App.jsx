@@ -2,6 +2,7 @@ import './App.css'
 import Greeter from './Greeter'
 import Die from './Die'
 import ArrayArgument from './ArrayArgument'
+import ObjectArgument from './ObjectArgument'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Die numSides={6} />
       <Die  /> */}
       <ArrayArgument values={[1,2,3,4]} />
+      <ObjectArgument person={ {name: "Avdo", age: 29} } />
     </div>
   )
 }
