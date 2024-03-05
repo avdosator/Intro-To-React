@@ -6,6 +6,7 @@ import ObjectArgument from './ObjectArgument'
 import DoubleDice from './DoubleDice'
 import DynamicHeading from './DynamicHeading'
 import ColorList from './ColorList'
+import Slots from './Slots'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <DoubleDice />
       <DoubleDice />
       <ColorList colors={["red", "green", "blue", "yellow"]} />
+      <Slots val1="a" val2="a" val3="a" />
     </div>
   )
 }
