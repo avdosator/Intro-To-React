@@ -3,8 +3,7 @@ export default function ShoppingList({ items }) {
         <ul>
             {items.map(i => {
                 return (
-                    <li style={
-                        {
+                    <li key={i.id} style={{
                             color: i.completed ? "grey" : "red",
                             textDecoration: i.completed ? "line-through" : "none"
                         }}
