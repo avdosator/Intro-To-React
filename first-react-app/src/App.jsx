@@ -29,8 +29,8 @@ const properties = [
 function App() {
   return (
     <div>
-      {/* <ShoppingList items={data} /> */}
-      <PropertyList properties={properties} />
+      <ShoppingList items={data} />
+      {/* <PropertyList properties={properties} /> */}
       {/* <DynamicHeading color='violet' text="This is dynamic heading" fontSize="35px" />
       <DynamicHeading color='lightblue' text="This is second dynamic heading" fontSize="20px" />
       <Greeter name="avdo" />

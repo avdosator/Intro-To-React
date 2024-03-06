@@ -1,4 +1,4 @@
-export default function Property({ name, rating, price }) {
+export default function Property({ name, rating, price, id }) {
     return (
         <div>
             <h2>{name}</h2>
