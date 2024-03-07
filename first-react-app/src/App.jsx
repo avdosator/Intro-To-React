@@ -11,6 +11,7 @@ import ShoppingList from './ShoppingList'
 import PropertyList from './PropertyList'
 import Clicker from './Clicker'
 import Form from './Form'
+import Clicker2 from './Clicker2'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -31,8 +32,10 @@ const properties = [
 function App() {
   return (
     <div>
-      <Form />
-      <Clicker />
+      {/* <Form />
+      <Clicker /> */}
+      <Clicker2 message="You clicked me" text="Click me"/>
+      <Clicker2 message="Stop clicking me!" text="Don't click me"/>
       {/* <ShoppingList items={data} /> */}
       {/* <PropertyList properties={properties} /> */}
       {/* <DynamicHeading color='violet' text="This is dynamic heading" fontSize="35px" />
