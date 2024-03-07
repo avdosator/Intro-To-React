@@ -3,10 +3,10 @@ import { useState } from "react";
 export default function Counter() {
 
     //watch out to not use const here because it will be changed
-    let [num, changeNum] = useState(0);
+    let [num, setNum] = useState(0);
 
     function incrementNum() {
-        changeNum(num += 1);
+        setNum(num += 1);
     }
     return (
         <div>
