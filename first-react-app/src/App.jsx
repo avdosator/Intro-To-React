@@ -9,6 +9,7 @@ import ColorList from './ColorList'
 import Slots from './Slots'
 import ShoppingList from './ShoppingList'
 import PropertyList from './PropertyList'
+import Clicker from './Clicker'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -29,7 +30,8 @@ const properties = [
 function App() {
   return (
     <div>
-      <ShoppingList items={data} />
+      <Clicker />
+      {/* <ShoppingList items={data} /> */}
       {/* <PropertyList properties={properties} /> */}
       {/* <DynamicHeading color='violet' text="This is dynamic heading" fontSize="35px" />
       <DynamicHeading color='lightblue' text="This is second dynamic heading" fontSize="20px" />
