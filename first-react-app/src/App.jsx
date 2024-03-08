@@ -14,6 +14,8 @@ import Form from './Form'
 import Clicker2 from './Clicker2'
 import Counter from './Counter'
 import Toggler from './Toggler'
+import ColorBox from './ColorBox'
+import ColorBoxContainer from './ColorBoxContainer'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -31,10 +33,13 @@ const properties = [
   { id: 129035, name: "Gold Miner Campground", rating: 4.69, price: 96 },
 ];
 
+const colors = ["teal", "green", "aqua", "olive", "aquamarine", "grey", "antiquewhite", "cadetblue", "coral", "lightblue", "pink"];
+
 function App() {
   return (
     <div>
-      <Toggler />
+      <ColorBoxContainer colors={colors}/>
+      {/* <Toggler /> */}
       {/* <Counter /> */}
       {/* <Form />
       <Clicker /> */}
