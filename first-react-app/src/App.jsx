@@ -16,6 +16,7 @@ import Counter from './Counter'
 import Toggler from './Toggler'
 import ColorBox from './ColorBox'
 import ColorBoxContainer from './ColorBoxContainer'
+import StateCounter from './StateCounter'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -38,7 +39,8 @@ const colors = ["teal", "green", "aqua", "olive", "aquamarine", "grey", "antique
 function App() {
   return (
     <div>
-      <ColorBoxContainer colors={colors}/>
+      <StateCounter />
+      {/* <ColorBoxContainer colors={colors}/> */}
       {/* <Toggler /> */}
       {/* <Counter /> */}
       {/* <Form />
