@@ -16,7 +16,17 @@ export default function StateLetterClicker() {
     }
     function deleteLetter(id) {
         setLetters(oldLetters => {
-            return [...oldLetters.filter((l) => l.id !== id )]
+            return [...oldLetters.filter((l) => l.id !== id)]
+        })
+    }
+    function allToX() {
+        setLetters((oldLetters) => {
+            return [...oldLetters.map((l) => {
+                return {
+                    ...l,
+                    letter: "X"
+                }
+            })]
         })
     }
     return (
@@ -27,6 +37,7 @@ export default function StateLetterClicker() {
                 </span>
             )} <br />
             <button onClick={addLetter}>Add Letter</button>
+            <button onClick={allToX}>All to X</button>
         </div>
     )
 }
