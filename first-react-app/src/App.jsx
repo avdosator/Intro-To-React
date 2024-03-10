@@ -20,6 +20,7 @@ import StateCounter from './StateCounter'
 import StateBigData from './StateBigData'
 import StateScoreKeeper from './StateScoreKeeper'
 import StateLetterClicker from './StateLetterClicker'
+import ScoreKeeper from './ScoreKeeper'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -42,7 +43,8 @@ const colors = ["teal", "green", "aqua", "olive", "aquamarine", "grey", "antique
 function App() {
   return (
     <div>
-      <StateLetterClicker />
+      <ScoreKeeper numPlayers={10} target={2} />
+      {/* <StateLetterClicker /> */}
       {/* <StateScoreKeeper /> */}
       {/* <StateBigData /> */}
       {/* <StateCounter /> */}

@@ -21,12 +21,12 @@ export default function StateLetterClicker() {
     }
     function allToX() {
         setLetters((oldLetters) => {
-            return [...oldLetters.map((l) => {
+            return oldLetters.map((l) => {
                 return {
                     ...l,
                     letter: "X"
                 }
-            })]
+            })
         })
     }
     return (
