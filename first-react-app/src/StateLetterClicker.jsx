@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {v4 as uuid} from "uuid"
 
 function pickLetter() {
     const letters = ["a", "b", "s", "z", "k", "x", "e"];
@@ -6,16 +7,16 @@ function pickLetter() {
 }
 
 export default function StateLetterClicker() {
-    const [letters, setLetters] = useState(["a"]);
+    const [letters, setLetters] = useState([{id: uuid(), letter: "a"}]);
     function addLetter() {
         const randLetter = pickLetter();
         setLetters(oldLetters => {
-            return [...oldLetters, randLetter];
+            return [...oldLetters, {id: uuid(), letter: randLetter}];
         })
     }
     return (
-        <div style={{fontSize: "4rem"}}>
-            {letters.map(l => <span>{l}</span>)} <br/>
+        <div>
+            {letters.map(l => <span key={l.id} style={{fontSize: "4rem"}}>{l.letter}</span>)} <br/>
             <button onClick={addLetter}>Add Letter</button>
         </div>
     )
