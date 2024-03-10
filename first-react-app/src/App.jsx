@@ -19,6 +19,7 @@ import ColorBoxContainer from './ColorBoxContainer'
 import StateCounter from './StateCounter'
 import StateBigData from './StateBigData'
 import StateScoreKeeper from './StateScoreKeeper'
+import StateLetterClicker from './StateLetterClicker'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -41,7 +42,8 @@ const colors = ["teal", "green", "aqua", "olive", "aquamarine", "grey", "antique
 function App() {
   return (
     <div>
-      <StateScoreKeeper />
+      <StateLetterClicker />
+      {/* <StateScoreKeeper /> */}
       {/* <StateBigData /> */}
       {/* <StateCounter /> */}
       {/* <ColorBoxContainer colors={colors}/> */}
