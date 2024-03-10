@@ -40,8 +40,8 @@ const colors = ["teal", "green", "aqua", "olive", "aquamarine", "grey", "antique
 function App() {
   return (
     <div>
-      <StateBigData />
-      {/* <StateCounter /> */}
+      {/* <StateBigData /> */}
+      <StateCounter />
       {/* <ColorBoxContainer colors={colors}/> */}
       {/* <Toggler /> */}
       {/* <Counter /> */}

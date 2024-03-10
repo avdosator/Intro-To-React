@@ -17,11 +17,15 @@ export default function StateCounter() {
         // console.log(count); count still has old value till we hit useState again, but previousCount is always updated
         setCount(previousCount => previousCount + 1);
     }
+    function setToTen() {
+        setCount(10); // when react see that previous state was 10 it will not re-render component because no changes happened
+    }
     return (
         <div>
             <p>{count}</p>
             <button onClick={addOne}>+1</button>
             <button onClick={addThree}>+3</button>
+            <button onClick={setToTen}>10</button>
         </div>
     )
 }
