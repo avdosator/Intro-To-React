@@ -1,6 +1,5 @@
 import './App.css'
 import Greeter from './Greeter'
-import Die from './Die'
 import ArrayArgument from './ArrayArgument'
 import ObjectArgument from './ObjectArgument'
 import DoubleDice from './DoubleDice'
@@ -22,6 +21,7 @@ import StateScoreKeeper from './StateScoreKeeper'
 import StateLetterClicker from './StateLetterClicker'
 import ScoreKeeper from './ScoreKeeper'
 import Lucky7 from './Section-68/Lucky7'
+import Die from './Section-68/Die'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -44,7 +44,8 @@ const colors = ["teal", "green", "aqua", "olive", "aquamarine", "grey", "antique
 function App() {
   return (
     <div>
-      <Lucky7 />
+      <Die value={5}/>
+      {/* <Lucky7 /> */}
       {/* <ScoreKeeper numPlayers={10} target={2} /> */}
       {/* <StateLetterClicker /> */}
       {/* <StateScoreKeeper /> */}
