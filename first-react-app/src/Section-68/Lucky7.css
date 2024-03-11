@@ -11,7 +11,7 @@
     /* padding-top: auto; */
 }
 
-.Lucky7-dice {
+.Lucky7-dice, .Dice {
     border: 1px solid black;
     width: 50vw;
     padding: 10px 0;

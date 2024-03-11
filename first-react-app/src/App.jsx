@@ -22,6 +22,7 @@ import StateLetterClicker from './StateLetterClicker'
 import ScoreKeeper from './ScoreKeeper'
 import Lucky7 from './Section-68/Lucky7'
 import Die from './Section-68/Die'
+import Dice from './Section-68/Dice'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -44,7 +45,8 @@ const colors = ["teal", "green", "aqua", "olive", "aquamarine", "grey", "antique
 function App() {
   return (
     <div>
-      <Die value={5}/>
+      <Dice dice={[1,2,3]} color="red"/>
+      <Dice dice={[1,5]}/>
       {/* <Lucky7 /> */}
       {/* <ScoreKeeper numPlayers={10} target={2} /> */}
       {/* <StateLetterClicker /> */}
