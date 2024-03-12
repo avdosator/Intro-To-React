@@ -25,6 +25,7 @@ import Die from './Section-68/Die'
 import Dice from './Section-68/Dice'
 import LuckyN from './Section-68/LuckyN'
 import { sum } from './Section-68/utils'
+import BoxGrid from './Section-68/BoxGrid'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -53,8 +54,10 @@ const allEqual = (dice) => dice.every((v) => v === dice[0]);
 function App() {
   return (
     <div>
-      <LuckyN numDices={2} winCheck={lessThan5} color="red" title="Sum less than 5" />
-      <LuckyN numDices={3} winCheck={allEqual} title="Roll same numbers" />
+      <BoxGrid />
+      
+      {/* <LuckyN numDices={2} winCheck={lessThan5} color="red" title="Sum less than 5" />
+      <LuckyN numDices={3} winCheck={allEqual} title="Roll same numbers" /> */}
       {/* <Lucky7 /> */}
       {/* <ScoreKeeper numPlayers={10} target={2} /> */}
       {/* <StateLetterClicker /> */}

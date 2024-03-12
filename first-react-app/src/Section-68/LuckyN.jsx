@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Dice from "./Dice";
+import Button from "./Button";
 import { rollDice, sum } from "./utils";
 
 function LuckyN({numDices = 2, winCheck, color, title = "Lucky"}) {
@@ -12,7 +13,7 @@ function LuckyN({numDices = 2, winCheck, color, title = "Lucky"}) {
         <div>
             <h2>{title} {isWinner && "You win"}</h2>
             <Dice dice={dice} color={color} />
-            <button onClick={roll}>Roll Again</button>
+            <Button clickFunc={roll}/>
         </div>
     )
 }

@@ -1,0 +1,12 @@
+.Button {
+    color: white;
+    background-color: rgb(9, 159, 26);
+    padding: 7px 30px;
+    border-radius: 10px;
+    transition: opacity 0.15s font-weight 0.2s;
+}
+
+.Button:hover {
+    opacity: 0.8;
+    font-weight: 700;
+}
