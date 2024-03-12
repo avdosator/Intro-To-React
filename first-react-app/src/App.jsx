@@ -24,6 +24,7 @@ import Lucky7 from './Section-68/Lucky7'
 import Die from './Section-68/Die'
 import Dice from './Section-68/Dice'
 import LuckyN from './Section-68/LuckyN'
+import { sum } from './Section-68/utils'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -43,11 +44,17 @@ const properties = [
 
 const colors = ["teal", "green", "aqua", "olive", "aquamarine", "grey", "antiquewhite", "cadetblue", "coral", "lightblue", "pink"];
 
+function lessThan5(dice) {
+  return sum(dice) < 5;
+}
+
+const allEqual = (dice) => dice.every((v) => v === dice[0]);
+
 function App() {
   return (
     <div>
-      <LuckyN numDices={2} target={10} color="red" />
-      <LuckyN numDices={3} target={9} />
+      <LuckyN numDices={2} winCheck={lessThan5} color="red" title="Sum less than 5" />
+      <LuckyN numDices={3} winCheck={allEqual} title="Roll same numbers" />
       {/* <Lucky7 /> */}
       {/* <ScoreKeeper numPlayers={10} target={2} /> */}
       {/* <StateLetterClicker /> */}
