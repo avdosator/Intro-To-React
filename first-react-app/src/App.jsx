@@ -26,6 +26,7 @@ import Dice from './Section-68/Dice'
 import LuckyN from './Section-68/LuckyN'
 import { sum } from './Section-68/utils'
 import BoxGrid from './Section-68/BoxGrid'
+import UsernameForm from './Section-69-Forms/UsernameForm'
 
 const data = [
   {id: 1, item: "eggs", quantity: 10, completed: true},
@@ -54,7 +55,7 @@ const allEqual = (dice) => dice.every((v) => v === dice[0]);
 function App() {
   return (
     <div>
-      <BoxGrid />
+      <UsernameForm />
       
       {/* <LuckyN numDices={2} winCheck={lessThan5} color="red" title="Sum less than 5" />
       <LuckyN numDices={3} winCheck={allEqual} title="Roll same numbers" /> */}
@@ -74,17 +75,6 @@ function App() {
       {/* <ShoppingList items={data} /> */}
       {/* <PropertyList properties={properties} /> */}
       {/* <DynamicHeading color='violet' text="This is dynamic heading" fontSize="35px" />
-      <DynamicHeading color='lightblue' text="This is second dynamic heading" fontSize="20px" />
-      <Greeter name="avdo" />
-      <Greeter name="vedo" />
-      <Die numSides={20} />
-      <Die numSides={6} />
-      <Die />
-      <ArrayArgument values={[1, 2, 3, 4]} />
-      <ObjectArgument person={{ name: "Avdo", age: 29 }} />
-      <DoubleDice />
-      <DoubleDice />
-      <ColorList colors={["red", "green", "blue", "yellow"]} />
       <Slots val1="a" val2="a" val3="a" /> */}
     </div>
   )
