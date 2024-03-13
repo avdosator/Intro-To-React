@@ -7,7 +7,13 @@ export default function UsernameForm() {
     }
     return (
         <div>
-            <input type="text" value={username} onChange={updateUsername} />
+            <label htmlFor="username">Username</label>
+            <input type="text"
+                value={username}
+                onChange={updateUsername}
+                id="username"
+                placeholder="username"
+                 />
             <button>Submit</button>
         </div>
     )
