@@ -1,10 +1,7 @@
 import { useState } from "react"
 
-export default function ShoppingListForm() {
-    // let [formData, setFormData] = useState([
-    //     {product: "Eggs", quantity: 20},
-    //     {product: "Milk", quantity: 2}
-    // ])
+export default function ShoppingListForm({add}) {
+
     let [formData, setFormData] = useState({ product: "", quantity: 0 });
     function handleChange(e) {
         setFormData(oldData => {
@@ -14,12 +11,12 @@ export default function ShoppingListForm() {
             }
         })
     }
-    function handleSubmit() {
-        console.log(`${formData.product} - ${formData.quantity}`);
+    function handleSubmit(e) {
+        e.preventDefault();
+        add(formData);
     }
     return (
         <form>
-            <h1>{formData.product} - {formData.quantity}</h1>
             <label htmlFor="product">Product</label>
             <input type="text"
                 id="product"
