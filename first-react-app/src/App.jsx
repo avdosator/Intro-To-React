@@ -30,6 +30,7 @@ import BadSignupForm from './Section-69-Forms/BadSignupForm'
 import SignUpForm from './Section-69-Forms/SignUpForm'
 import ShoppingListForm from './Section-69-Forms/ShoppingListForm'
 import ShoppingList from './Section-69-Forms/ShoppingList'
+import FormDemo from './Section-69-Forms/FormDemo'
 
 
 const data = [
@@ -59,7 +60,8 @@ const allEqual = (dice) => dice.every((v) => v === dice[0]);
 function App() {
 	return (
 		<div>
-			<ShoppingList />
+			<FormDemo />
+			{/* <ShoppingList /> */}
 			{/* <SignUpForm /> */}
 			{/* <LuckyN numDices={2} winCheck={lessThan5} color="red" title="Sum less than 5" />
       <LuckyN numDices={3} winCheck={allEqual} title="Roll same numbers" /> */}
