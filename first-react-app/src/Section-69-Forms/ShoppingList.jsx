@@ -1,15 +1,16 @@
 import { useState } from "react"
 import ShoppingListForm from "./ShoppingListForm"
+import {v4 as uuid} from "uuid"
 
 export default function ShoppingList() {
     const [products, setProducts] = useState([
-        { id: 1, product: "Eggs", quantity: 20 },
-        { id: 2, product: "Milk", quantity: 2 }
+        { id: uuid(), product: "Eggs", quantity: 20 },
+        { id: uuid(), product: "Milk", quantity: 2 }
     ])
     function addToList(item) {
         setProducts(oldProducts => {
             return [...oldProducts, {
-                ...item, id: Math.floor(Math.random() * 100) + 1
+                ...item, id: uuid()
             }]
         })
     }

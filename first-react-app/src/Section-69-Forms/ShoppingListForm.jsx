@@ -14,6 +14,7 @@ export default function ShoppingListForm({add}) {
     function handleSubmit(e) {
         e.preventDefault();
         add(formData);
+        setFormData({product: "", quantity: 0})
     }
     return (
         <form>
