@@ -5,7 +5,7 @@ export default function EffectCounter() {
     let [name, setName] = useState("");
     useEffect(() => {
         console.log("Effect was called!");
-    }, [counter])
+    }, [counter]) // if we wrote [] then this effect would be called just on first render 
     function increment() {
         setCounter(prevCounter => prevCounter + 1);
     }

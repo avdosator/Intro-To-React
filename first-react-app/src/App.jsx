@@ -32,6 +32,7 @@ import ShoppingListForm from './Section-69-Forms/ShoppingListForm'
 import ShoppingList from './Section-69-Forms/ShoppingList'
 import FormDemo from './Section-69-Forms/FormDemo'
 import EffectCounter from './Section-70-Effects/EffectCounter'
+import QuoteFetcher from './Section-70-Effects/QuoteFetcher'
 
 
 const data = [
@@ -61,7 +62,8 @@ const allEqual = (dice) => dice.every((v) => v === dice[0]);
 function App() {
 	return (
 		<div>
-			<EffectCounter />
+			<QuoteFetcher />
+			{/* <EffectCounter /> */}
 			{/* <FormDemo /> */}
 			{/* <ShoppingList /> */}
 			{/* <SignUpForm /> */}
