@@ -35,6 +35,7 @@ import EffectCounter from './Section-70-Effects/EffectCounter'
 import QuoteFetcher from './Section-70-Effects/QuoteFetcher'
 import GitHubProfileSearch from './Section-70-Effects/GitHubProfileSearch'
 import MaterialUI from './Section-71-Material-UI/MaterialUI'
+import RatingComponent from './Section-71-Material-UI/RatingComponent'
 
 
 const data = [
@@ -65,6 +66,7 @@ function App() {
 	return (
 		<div>
 			<MaterialUI />
+			<RatingComponent />
 			{/* <GitHubProfileSearch /> */}
 			{/* <QuoteFetcher /> */}
 			{/* <EffectCounter /> */}
