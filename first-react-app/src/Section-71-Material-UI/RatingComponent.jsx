@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
-import Box from "@mui/material/Box";
 
 export default function RatingComponent() {
     let [value, setValue] = useState(1);
