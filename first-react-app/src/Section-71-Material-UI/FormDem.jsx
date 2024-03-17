@@ -1,7 +1,8 @@
 import { useState } from "react"
-import { TextField, Slider, Stack } from "@mui/material";
+import { TextField, Slider, Stack, Box } from "@mui/material";
 import VolumeDown from '@mui/icons-material/VolumeDown';
 import VolumeUp from '@mui/icons-material/VolumeUp';
+import RatingComponent from "./RatingComponent";
 
 export default function FormDem() {
     let [name, setName] = useState("");
@@ -23,7 +24,8 @@ export default function FormDem() {
         },
       ];
     return (
-        <div>
+        <Box sx={{border: "3px black solid", p: 4, height: 300}}>
+            <RatingComponent />
             <TextField
                 id="outlined-basic"
                 label="Name"
@@ -44,6 +46,6 @@ export default function FormDem() {
       <VolumeUp />
       </Stack>
 
-        </div>
+        </Box>
     )
 }
