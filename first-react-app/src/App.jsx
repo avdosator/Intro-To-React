@@ -34,6 +34,7 @@ import FormDemo from './Section-69-Forms/FormDemo'
 import EffectCounter from './Section-70-Effects/EffectCounter'
 import QuoteFetcher from './Section-70-Effects/QuoteFetcher'
 import GitHubProfileSearch from './Section-70-Effects/GitHubProfileSearch'
+import MaterialUI from './Section-71-Material-UI/MaterialUI'
 
 
 const data = [
@@ -63,7 +64,8 @@ const allEqual = (dice) => dice.every((v) => v === dice[0]);
 function App() {
 	return (
 		<div>
-			<GitHubProfileSearch />
+			<MaterialUI />
+			{/* <GitHubProfileSearch /> */}
 			{/* <QuoteFetcher /> */}
 			{/* <EffectCounter /> */}
 			{/* <FormDemo /> */}
