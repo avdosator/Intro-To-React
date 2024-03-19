@@ -7,8 +7,11 @@ import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
 import { useState } from 'react';
 
-export default function TodoListItem({todo, remove}) {
+export default function TodoListItem({todo, remove, toggle}) {
     const labelId = `checkbox-list-label-${todo.id}`;
+    function toggleTodo() {
+        toggle(todo.id);
+    }
     return (
             <ListItem
                 secondaryAction={
@@ -26,6 +29,7 @@ export default function TodoListItem({todo, remove}) {
                             tabIndex={-1}
                             disableRipple
                             inputProps={{ 'aria-labelledby': labelId }}
+                            onChange={toggleTodo}
                         />
                     </ListItemIcon>
                     <ListItemText id={labelId} primary={todo.text} />
