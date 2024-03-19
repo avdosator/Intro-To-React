@@ -14,7 +14,7 @@ export default function StateLetterClicker() {
             return [...oldLetters, { id: uuid(), letter: randLetter }];
         })
     }
-    function deleteLetter(id) {
+    function deleteLetter(id) { // do I need [] and that ...destructuring here?
         setLetters(oldLetters => {
             return [...oldLetters.filter((l) => l.id !== id)]
         })

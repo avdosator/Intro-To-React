@@ -7,12 +7,12 @@ import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
 import { useState } from 'react';
 
-export default function TodoListItem({todo}) {
+export default function TodoListItem({todo, remove}) {
     const labelId = `checkbox-list-label-${todo.id}`;
     return (
             <ListItem
                 secondaryAction={
-                    <IconButton edge="end" aria-label="comments">
+                    <IconButton edge="end" aria-label="comments" onClick={remove}>
                         <CommentIcon />
                     </IconButton>
                 }
