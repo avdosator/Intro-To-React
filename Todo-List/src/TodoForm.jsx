@@ -9,18 +9,22 @@ import { useState } from 'react';
 
 export default function TodoForm({ add }) {
     let [todoText, setTodoText] = useState("");
+    
     function handleChange(e) {
         setTodoText(e.target.value);
     }
+
     function handleSubmit(e) {
         e.preventDefault();
         add(todoText);
         setTodoText("");
     }
+
     return (
         <ListItem>
             <form onSubmit={handleSubmit}>
                 <TextField
+                    value={todoText}
                     id="outlined-basic"
                     label="New Todo"
                     variant="outlined"
