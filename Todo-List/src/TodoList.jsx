@@ -1,16 +1,17 @@
 import List from '@mui/material/List';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import TodoListItem from './TodoListItem';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
-import { useEffect } from 'react';
 
 const getData = () => {
     const data = JSON.parse(localStorage.getItem("todos"));
-    if(!data) {
+    if (!data) {
         return [];
     } else {
         return data;
-    }      
+    }
 }
 
 export default function TodoList() {
@@ -39,21 +40,32 @@ export default function TodoList() {
     }
 
     function addTodo(todoText) {
-        setTodos(oldTodos => [...oldTodos, {id: crypto.randomUUID(), text: todoText, completed: false}]);
+        setTodos(oldTodos => [...oldTodos, { id: crypto.randomUUID(), text: todoText, completed: false }]);
     }
 
     return (
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-            {todos.map((todo) =>
-                <TodoListItem
-                    key={todo.id}
-                    todo={todo}
-                    remove={() => removeTodo(todo.id)}
-                    toggle={toggleTodo}
-                />
-            )}
-            <TodoForm add={addTodo}/>
-        </List>
+        <Box
+            sx={{display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            mt: 2
+            }}
+        >
+            <Typography variant="h3" gutterBottom>
+                Todos
+            </Typography>
+            <List sx={{ width: '100%', maxWidth: 460, bgcolor: 'background.paper' }}>
+                {todos.map((todo) =>
+                    <TodoListItem
+                        key={todo.id}
+                        todo={todo}
+                        remove={() => removeTodo(todo.id)}
+                        toggle={toggleTodo}
+                    />
+                )}
+                <TodoForm add={addTodo} />
+            </List>
+        </Box>
     )
 }
 
