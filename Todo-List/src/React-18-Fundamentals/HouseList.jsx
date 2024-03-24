@@ -1,3 +1,4 @@
+import HouseRow from "./HouseRow"
 
 const houses = [
     { id: 1, address: "Mitra Sucura, Vogosca", country: "BiH", price: 300000 },
@@ -18,17 +19,7 @@ export default function HouseList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {houses.map((h) => {
-                        return (
-                            <tr key={h.id}>
-                                <td>{h.address}</td>
-                                <td>{h.country}</td>
-                                <td>{h.price}</td>
-                            </tr>
-                        )
-                    }
-                    )}
-
+                    {houses.map((h) => <HouseRow key={h.id} {...h} />)}
                 </tbody>
             </table>
         </>
