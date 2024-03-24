@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import HouseRow from "./HouseRow"
 import fakeFetch from "./fakeFetchFromApi";
+import AddButton from "./AddButton";
 
 export default function HouseList() {
     let [houses, setHouses] = useState([]);
@@ -10,7 +11,7 @@ export default function HouseList() {
             setHouses(houses);
         }
         fetchHouses();
-    });
+    }, []);
 
     function addHouse() {
         return setHouses(prevHouses => [
@@ -35,7 +36,7 @@ export default function HouseList() {
                     {houses.map((h) => <HouseRow key={h.id} {...h} />)}
                 </tbody>
             </table>
-            <button className="btn btn-primary" onClick={addHouse}>Add</button>
+            <AddButton add={addHouse}/>
         </>
     )
 }

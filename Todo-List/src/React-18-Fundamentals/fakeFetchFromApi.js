@@ -1,7 +1,7 @@
 // this function have job of fake fetching data from api
+let allHouses = [];
 
 const fakeFetch = () => {
-    let allHouses = [];
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             allHouses = [
