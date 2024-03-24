@@ -1,6 +1,6 @@
 import currencyFormatter from "./currencyFormatter";
 
-export default function HouseRow({ address, country, price }) {
+function HouseRow({ address, country, price }) {
     return (
         <tr>
             <td>{address}</td>
@@ -9,3 +9,5 @@ export default function HouseRow({ address, country, price }) {
         </tr>
     )
 }
+
+export default HouseRow;

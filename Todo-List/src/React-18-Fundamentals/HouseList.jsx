@@ -1,17 +1,21 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import HouseRow from "./HouseRow"
+import fakeFetch from "./fakeFetchFromApi";
 
-const allHouses = [
-    { id: 1, address: "Mitra Sucura, Vogosca", country: "BiH", price: 300000 },
-    { id: 2, address: "Osjek bb, Ilidza", country: "BiH", price: 420000 }
-]
 export default function HouseList() {
-    let [houses, setHouses] = useState(allHouses);
+    let [houses, setHouses] = useState([]);
+    useEffect(() => {
+        const fetchHouses = async() => {
+            const houses = await fakeFetch();        
+            setHouses(houses);
+        }
+        fetchHouses();
+    });
 
     function addHouse() {
         return setHouses(prevHouses => [
             ...prevHouses,
-            {id:3, address: "Franjevacka 45, Sarajevo", country: "BiH", price: 550000}
+            {id: crypto.randomUUID(), address: "Franjevacka 45, Sarajevo", country: "BiH", price: 550000}
         ])
     }
     return (
