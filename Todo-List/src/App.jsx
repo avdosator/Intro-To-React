@@ -12,15 +12,16 @@ import { useState } from 'react';
 import House from './React-18-Fundamentals/House';
 
 function App() {
-  let [img, setImg] = useState(true);
-  
-  function show() {
-    setImg(prevImg => !prevImg);
+  let [selectedHouse, setSelectedHouse] = useState();
+
+  function selectHouse(house) {
+    setSelectedHouse(house);
   }
+  
   return (
     <>
     <Banner />
-    {img ? <HouseList showHouse={show}/> : <House /> }
+    {selectedHouse ? <House house={selectedHouse} /> : <HouseList selectHouse={selectHouse} /> }
     </>
 
   // Todo List App
