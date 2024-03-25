@@ -3,7 +3,7 @@ import HouseRow from "./HouseRow"
 import fakeFetch from "./fakeFetchFromApi";
 import AddButton from "./AddButton";
 
-export default function HouseList() {
+export default function HouseList({showHouse}) {
     let [houses, setHouses] = useState([]);
     useEffect(() => {
         const fetchHouses = async() => {
@@ -33,7 +33,7 @@ export default function HouseList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {houses.map((h) => <HouseRow key={h.id} {...h} />)}
+                    {houses.map((h) => <HouseRow key={h.id} {...h} showHouse={showHouse} />)}
                 </tbody>
             </table>
             <AddButton add={addHouse}/>
